@@ -7,8 +7,6 @@ use Spatie\Permission\Models\Role as SpatieRole;
 
 class Role extends SpatieRole
 {
-    use HasUuids;
-
     const ROLE_ADMIN = 'admin';
 
     const ROLE_MANAGER = 'manager';

@@ -10,7 +10,7 @@ class AuthTest extends TestCase
     public function test_login_success(): void
     {
         $response = $this->json(
-            'post',
+            'get',
             route('auth.login'),
             [
                 'phone' => User::factory()->raw()['phone'],
@@ -31,7 +31,7 @@ class AuthTest extends TestCase
     public function test_login_validation_error(): void
     {
         $response = $this->json(
-            'post',
+            'get',
             route('auth.login'),
             [
                 'phone' => null,

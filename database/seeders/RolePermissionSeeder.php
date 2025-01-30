@@ -29,11 +29,5 @@ class RolePermissionSeeder extends Seeder
     public function resetCachedRolesAndPermissions(): void
     {
         app()[PermissionRegistrar::class]->forgetCachedPermissions();
-
-        DB::table('spatie_model_has_roles')->delete();
-        DB::table('spatie_model_has_permissions')->delete();
-        DB::table('spatie_role_has_permissions')->delete();
-        DB::table('spatie_roles')->delete();
-        DB::table('spatie_permissions')->delete();
     }
 }
